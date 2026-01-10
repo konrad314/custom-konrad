@@ -1,23 +1,35 @@
 {{ define "main" }}
-  <article class="doc">
-    <h1>{{ site.Title }}</h1>
-    {{ .Content }}
 
-    <hr />
+<section class="hero">
+  <h1 class="site-title">Custom Konrad</h1>
+  <p class="site-tagline">Thoughtfully engineered solutions.</p>
+</section>
 
-    <h2>Papers</h2>
-    <ul>
-      {{ range where site.RegularPages "Section" "papers" }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
+<section class="content-index">
 
-    <h2>Projects</h2>
-    <ul>
-      {{ range where site.RegularPages "Section" "projects" }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
-  </article>
+  {{ with site.GetPage "section" "papers" }}
+  <h2>Papers</h2>
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
+  {{ with site.GetPage "section" "projects" }}
+  <h2>Projects</h2>
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
+</section>
+
 {{ end }}
 

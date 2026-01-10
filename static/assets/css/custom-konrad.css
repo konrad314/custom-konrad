@@ -39,3 +39,38 @@ body {
   text-decoration: underline;
 }
 
+.hero {
+  text-align: center;
+  margin: 4rem 0 3rem;
+}
+
+.site-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-tagline {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.content-index {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.content-index h2 {
+  margin-top: 3rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.content-index ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-index li {
+  margin: 0.6rem 0;
+}
+
