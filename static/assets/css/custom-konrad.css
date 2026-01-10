@@ -74,3 +74,14 @@ body {
   margin: 0.6rem 0;
 }
 
+.site-header {
+  text-align: center;
+  padding: 24px 0 12px;
+}
+
+.site-logo {
+  max-width: 420px;
+  width: 80%;
+  height: auto;
+}
+
