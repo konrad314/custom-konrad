@@ -1,0 +1,8 @@
+baseURL = "https://custom-konrad.com/"
+languageCode = "en-us"
+title = "Custom Konrad"
+enableGitInfo = true
+
+[params]
+  description = "Thoughtfully engineered solutions."
+

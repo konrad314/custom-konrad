@@ -1,0 +1,41 @@
+:root {
+  --bg: #0f1115;
+  --fg: #e9edf2;
+  --muted: #b7c0cc;
+  --accent: #2f6bd8;
+}
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.doc h1 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.doc p {
+  margin: 0.75rem 0;
+}
+
+.doc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.doc a:hover {
+  text-decoration: underline;
+}
+
