@@ -23,7 +23,7 @@ body {
 .wrap {
   max-width: 900px;
   margin: 0 auto;
-  padding: 48px 20px;
+  padding: 18px 20px 48px;
 }
 
 .doc h1 {
@@ -46,7 +46,7 @@ body {
 
 .hero {
   text-align: center;
-  margin: 4rem 0 3rem;
+  margin: 0.25rem 0 2rem;
 }
 
 .site-title {
@@ -57,6 +57,7 @@ body {
 .site-tagline {
   font-size: 1.2rem;
   opacity: 0.85;
+  margin-top: 0.35rem;
 }
 
 .content-index {
@@ -81,10 +82,13 @@ body {
 
 .site-header {
   text-align: center;
-  padding: 24px 0 12px;
+  padding: 12px 0 0;   /* was 18px 0 6px */
+  line-height: 0;      /* eliminates baseline whitespace */
 }
 
 .site-logo {
+  display: block;      /* removes inline-image baseline gap */
+  margin: 0 auto;
   max-width: 420px;
   width: 80%;
   height: auto;
