@@ -7,10 +7,23 @@
   <meta name="description" content="{{ site.Params.description }}">
   <link rel="stylesheet" href="/assets/css/custom-konrad.css">
 </head>
+
 <body>
+
+  <header class="site-header">
+    <a href="{{ "/" | relURL }}">
+      <img
+        src="/assets/img/logo/custom_konrad.png"
+        alt="Custom Konrad"
+        class="site-logo"
+      >
+    </a>
+  </header>
+
   <main class="wrap">
     {{ block "main" . }}{{ end }}
   </main>
+
 </body>
 </html>
 
