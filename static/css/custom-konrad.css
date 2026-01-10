@@ -1,5 +1,10 @@
 :root {
-  --bg: #0f1115;
+/* Original dark gray - keep for transparent logo later */
+/*  --bg: #0f1115; */
+
+/* Match logo background (pure black) */
+  --bg: #000000;
+
   --fg: #e9edf2;
   --muted: #b7c0cc;
   --accent: #2f6bd8;
