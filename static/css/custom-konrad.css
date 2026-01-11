@@ -54,12 +54,12 @@ body {
 }
 
 .site-title {
-  font-size: 3rem;
+  font-size: 2.6rem; /* slightly reduced for left-aligned layout */
   margin-bottom: 0.5rem;
 }
 
 .site-tagline {
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* slightly reduced for left-aligned layout */
   opacity: 0.85;
   margin-top: 0.35rem;
 }
@@ -99,7 +99,7 @@ body {
   display: block;          /* removes inline-image baseline gap */
   margin: 0;               /* left align */
   max-width: 420px;
-  width: 80%;
+  width: 65%;              /* slightly reduced so it doesn't dominate */
   height: auto;
 }
 
