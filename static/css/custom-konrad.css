@@ -121,8 +121,8 @@ body {
 .site-logo {
   display: block;          /* removes inline-image baseline gap */
   margin: 0;               /* left align */
-  max-width: 420px;
-  width: 65%;              /* slightly reduced so it doesn't dominate */
+  max-width: 320px;
+  width: 55%;              /* slightly reduced so it doesn't dominate */
   height: auto;
 }
 
