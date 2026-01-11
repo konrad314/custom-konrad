@@ -5,7 +5,9 @@
   <title>{{ .Title }} | {{ site.Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.Params.description }}">
-  <link rel="stylesheet" href="/css/custom-konrad.css">
+  {{ $css := resources.Get "css/custom-konrad.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
 </head>
 
 <body>
