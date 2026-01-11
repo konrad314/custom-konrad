@@ -28,7 +28,20 @@ body {
   text-align: left;
 }
 
-/* Document typography */
+/* ---------------------------
+   Paper / content pages
+   --------------------------- */
+
+.doc {
+  text-align: left;
+}
+
+.doc h1,
+.doc h2,
+.doc h3 {
+  text-align: left;
+}
+
 .doc h1 {
   font-size: 2.1rem;
   margin-bottom: 1rem;
@@ -36,6 +49,16 @@ body {
 
 .doc p {
   margin: 0.75rem 0;
+}
+
+.doc ul,
+.doc ol {
+  margin: 0.75rem 0;
+  padding-left: 1.2rem; /* ensure bullets/nums sit correctly */
+}
+
+.doc li {
+  margin: 0.35rem 0;
 }
 
 .doc a {
