@@ -113,7 +113,7 @@ body {
 .site-header {
   max-width: 900px;        /* match .wrap column */
   margin: 0 auto;
-  padding: 12px 20px 0;    /* align with .wrap padding */
+  padding: 8px 20px 0;    /* align with .wrap padding */
   line-height: 0;          /* eliminates baseline whitespace */
   text-align: left;
 }
