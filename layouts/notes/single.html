@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+<article class="doc">
+  <h1>{{ .Title }}</h1>
+  <p class="note-date">{{ .Date.Format "2006-01-02" }}</p>
+  {{ .Content }}
+</article>
+
+{{ end }}

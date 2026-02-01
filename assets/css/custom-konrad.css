@@ -264,3 +264,12 @@ body {
   }
 }
 
+
+/* Notes date (subtle) */
+.note-date {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
