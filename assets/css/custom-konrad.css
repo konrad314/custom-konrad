@@ -29,6 +29,138 @@ body {
 }
 
 /* ---------------------------
+   Header + logo + nav
+   --------------------------- */
+
+/*
+  Header spacing policy:
+  - Top padding gives the logo air (primary request).
+  - Left/right padding matches .wrap for perfect alignment.
+*/
+.site-header {
+  max-width: 900px;           /* match .wrap column */
+  margin: 0 auto;
+  padding: 48px 20px 24px;    /* top | left/right | bottom */
+  text-align: left;
+}
+
+/* Logo: block-level so it never collides with nav */
+.site-logo {
+  display: block;
+  margin: 0 0 10px 0;
+  max-width: 340px;
+  width: 55%;
+  height: auto;
+}
+
+/*
+  Brand line under logo (YouTube-consistent).
+  Use ONLY in the header:
+    <div class="site-tagline">Adventure · Integrity · Engineering</div>
+*/
+.site-tagline {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 18px 0;         /* space before nav */
+  opacity: 0.95;
+}
+
+/* Navigation sits under logo/tagline */
+.site-nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 6px 0;
+  padding: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.site-nav a:hover {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+/* Active tab (if your templates add class="active") */
+.site-nav a.active {
+  color: var(--fg);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* ---------------------------
+   Homepage hero (minimal landing page)
+   --------------------------- */
+
+.hero {
+  text-align: left;
+  margin: 0.10rem 0 2rem;
+}
+
+/*
+  IMPORTANT:
+  - Do NOT use .site-tagline on the homepage anymore.
+  - Use .home-tagline for “Thoughtfully engineered solutions.”
+*/
+.home-tagline {
+  color: var(--muted);
+  margin: 18px 0 0 0;
+  font-size: 1.0rem;
+  letter-spacing: 0.02em;
+  opacity: 0.90;
+}
+
+/* If you ever re-enable a title, keep it simple */
+.site-title {
+  font-size: 2.6rem;
+  margin: 0 0 0.5rem 0;
+}
+
+/* ---------------------------
+   Index sections (Papers / Projects / etc.)
+   --------------------------- */
+
+.content-index {
+  max-width: none;
+  margin: 0 0 4rem;
+  text-align: left;
+}
+
+.content-index h2 {
+  margin-top: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.16);
+  padding-bottom: 0.5rem;
+}
+
+.content-index ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.9rem 0 0 0;
+}
+
+.content-index li {
+  margin: 0.6rem 0;
+}
+
+.content-index a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.content-index a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------
    Paper / content pages
    --------------------------- */
 
@@ -54,7 +186,7 @@ body {
 .doc ul,
 .doc ol {
   margin: 0.75rem 0;
-  padding-left: 1.2rem; /* ensure bullets/nums sit correctly */
+  padding-left: 1.2rem;
 }
 
 .doc li {
@@ -70,66 +202,18 @@ body {
   text-decoration: underline;
 }
 
-/* Homepage hero */
-.hero {
-  text-align: left;
-  margin: 0.25rem 0 2rem;
-}
+/* ---------------------------
+   Footer legal block
+   --------------------------- */
 
-.site-title {
-  font-size: 2.6rem; /* slightly reduced for left-aligned layout */
-  margin-bottom: 0.5rem;
-}
-
-.site-tagline {
-  font-size: 1.1rem; /* slightly reduced for left-aligned layout */
-  opacity: 0.85;
-  margin-top: 0.35rem;
-}
-
-/* Index sections (Papers / Projects / etc.) */
-.content-index {
-  max-width: none;         /* stop creating a second centered column */
-  margin: 0 0 4rem;
-  text-align: left;
-}
-
-.content-index h2 {
-  margin-top: 3rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-}
-
-.content-index ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.content-index li {
-  margin: 0.6rem 0;
-}
-
-/* Header + logo */
-.site-header {
-  max-width: 900px;        /* match .wrap column */
-  margin: 0 auto;
-  padding: 8px 20px 0;    /* align with .wrap padding */
-  line-height: 0;          /* eliminates baseline whitespace */
-  text-align: left;
-}
-
-.site-logo {
-  display: block;          /* removes inline-image baseline gap */
-  margin: 0;               /* left align */
-  max-width: 320px;
-  width: 55%;              /* slightly reduced so it doesn't dominate */
-  height: auto;
-}
-
-/* Footer legal block */
+/*
+  Footer spacing policy:
+  - Present and anchored, not “buried”.
+  - Tight spacing between border and text; modest bottom padding.
+*/
 .ck-footer {
-  margin-top: 3rem;
-  padding: 1.5rem 1rem;
+  margin-top: 64px;
+  padding: 16px 0 20px;
   border-top: 1px solid rgba(255,255,255,0.12);
   background: var(--bg);
   color: var(--muted);
@@ -138,12 +222,45 @@ body {
 }
 
 .ck-footer__inner {
-  max-width: 900px;        /* align with main column */
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;         /* align with .wrap padding */
+  padding: 0 20px; /* align with .wrap */
 }
 
 .ck-footer p {
-  margin: 0.35rem 0;
+  margin: 8px 0;
+}
+
+/* ---------------------------
+   Responsive adjustments
+   --------------------------- */
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 32px 18px 16px;
+  }
+
+  .site-logo {
+    width: 70%;
+    max-width: 320px;
+  }
+
+  .site-tagline {
+    font-size: 1.0rem;
+    margin-bottom: 14px;
+  }
+
+  .wrap {
+    padding: 14px 18px 40px;
+  }
+
+  .site-title {
+    font-size: 2.1rem;
+  }
+
+  .home-tagline {
+    margin-top: 14px;
+    font-size: 0.98rem;
+  }
 }
 

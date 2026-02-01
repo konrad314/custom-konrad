@@ -1,35 +1,9 @@
 {{ define "main" }}
-
-<section class="hero">
-  <!-- h1 class="site-title">Custom Konrad</h1 -->
-  <p class="site-tagline">Thoughtfully engineered solutions.</p>
-</section>
-
-<section class="content-index">
-
-  {{ with site.GetPage "section" "papers" }}
-  <h2>Papers</h2>
-  <ul>
-    {{ range .Pages.ByDate.Reverse }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-  {{ end }}
-
-  {{ with site.GetPage "section" "projects" }}
-  <h2>Projects</h2>
-  <ul>
-    {{ range .Pages.ByDate.Reverse }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-  {{ end }}
-
-</section>
-
+   
+   <!-- Let's keep the site minimalistic and clean.  -->
+   <!-- <section class="hero">
+        <p class="home-tagline">Thoughtfully engineered solutions.</p>
+        </section>  -->
+  
 {{ end }}
 
